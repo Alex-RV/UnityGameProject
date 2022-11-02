@@ -16,7 +16,7 @@ public class CoinCollect : MonoBehaviour
         
     }
     private void OnTriggerEnter(Collider other){
-        Debug.Log("Coin");
+        // Debug.Log("Coin");
         GameObject.Destroy(gameObject);
         
     }

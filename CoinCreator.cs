@@ -23,7 +23,7 @@ public class CoinCreator : MonoBehaviour
         //     var coin = GameObject.Instantiate(SourceObject);
         //     child.position = child.position;
         // }
-        Debug.Log("Coin");
+        // Debug.Log("Coin");
         var Obj = GameObject.Instantiate(Base);
         Obj.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z +5f);
     }
