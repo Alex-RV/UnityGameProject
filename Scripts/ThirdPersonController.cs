@@ -156,6 +156,7 @@ namespace StarterAssets
         {
             _hasAnimator = TryGetComponent(out _animator);
 
+            Attack();
             JumpAndGravity();
             GroundedCheck();
             Move();
@@ -276,6 +277,15 @@ namespace StarterAssets
             {
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+            }
+        }
+
+        private void Attack()
+        {
+            if (_input.attack)
+            {
+                Debug.Log("Attack!!!");
+                _input.attack = false;
             }
         }
 

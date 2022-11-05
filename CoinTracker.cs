@@ -18,7 +18,9 @@ public class CoinTracker : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-        coins++;
-        Debug.Log(coins);
+        if(other.gameObject.tag == "Coin"){
+            coins++;
+            Debug.Log(coins);
+        }
     }
 }
