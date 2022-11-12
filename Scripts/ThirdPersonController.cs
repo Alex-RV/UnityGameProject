@@ -157,6 +157,7 @@ namespace StarterAssets
             _hasAnimator = TryGetComponent(out _animator);
 
             Attack();
+            ClimbAndCrouch();
             JumpAndGravity();
             GroundedCheck();
             Move();
@@ -288,6 +289,23 @@ namespace StarterAssets
                 _input.attack = false;
             }
         }
+
+        private void ClimbAndCrouch()
+        {
+            if (_input.crouch)
+            {
+                Debug.Log("Crouch!!!");
+                _input.crouch = false;
+                _input.climb = false;
+            }
+            if (_input.climb)
+            {
+                Debug.Log("Climb!!!");
+                _input.crouch = false;
+                _input.climb = false;
+            }
+        }
+        
 
         private void JumpAndGravity()
         {

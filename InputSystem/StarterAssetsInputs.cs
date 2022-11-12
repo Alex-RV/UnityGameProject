@@ -13,6 +13,8 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 		public bool attack;
+		public bool crouch;
+		public bool climb;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -74,6 +76,14 @@ namespace StarterAssets
 
 		public void AttackInput(bool newAttackSate){
 			attack = newAttackSate;
+		}
+
+		public void CrouchInput(bool newCrouchSate){
+			crouch = newCrouchSate;
+		}
+
+		public void ClimbInput(bool newClimbSate){
+			climb = newClimbSate;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
